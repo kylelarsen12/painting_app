@@ -18,3 +18,13 @@ const clearPixel = document.querySelector(".painting");
 clearPixel.addEventListener("dblclick", function (e) {
   e.target.style.backgroundColor = "white";
 });
+
+let buttonTry = document.createElement("button");
+document.body.appendChild(buttonTry);
+buttonTry.textContent = "Clear canvas";
+buttonTry.addEventListener("click", function (e) {
+  pixel = document.querySelectorAll(".pixel");
+  for (let i = 0; i < pixel.length; i++) {
+    pixel[i].style.backgroundColor = "white";
+  }
+});
